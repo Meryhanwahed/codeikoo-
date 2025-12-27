@@ -1,0 +1,34 @@
+.footer-section {
+  background-color: #1a1a1a !important;
+}
+.text-gold {
+  color: #C5A059;
+}
+.footer-link {
+  color: #bbb;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.footer-link:hover {
+  color: #C5A059;
+  padding-right: 5px;
+}
+.social-links a {
+  width: 35px;
+  height: 35px;
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #C5A059;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.social-links a:hover {
+  background: #C5A059;
+  color: white;
+}
+i {
+    margin-left: 10px; 
+}

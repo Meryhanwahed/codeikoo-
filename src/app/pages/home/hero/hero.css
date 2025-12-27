@@ -1,0 +1,12 @@
+.hero-section {
+  height: 90vh;
+  background: linear-gradient(to left, #000000b3, rgba(0,0,0,0.3)),
+              url('/assets/images/main-facade.webp') no-repeat center center/cover;
+}
+.text-gold { color: #C5A059; } 
+.btn-gold {
+  background-color: #C5A059;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+}

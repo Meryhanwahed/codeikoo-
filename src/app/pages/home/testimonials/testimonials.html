@@ -1,0 +1,37 @@
+<section class="testimonials-section py-5" dir="rtl">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <div class="col-lg-5 mb-4 mb-lg-0">
+        <div class="image-stack">
+          <img src="assets/images/project-done.png" alt="واجهة مبنى تم تنفيذها بالفوم" class="img-fluid main-img shadow">
+          <div class="experience-badge">
+            <span class="number">+10</span>
+            <span class="text">سنوات خبرة</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-7 ps-lg-5">
+        <h2 class="fw-bold mb-2">ماذا يقول <span class="text-gold">عملاؤنا؟</span></h2>
+        <div class="underline mb-5"></div>
+
+        <div class="reviews-container">
+          @for (review of reviews; track review.author) {
+            <div class="review-card mb-4 p-4">
+              <i class="fas fa-quote-right quote-icon mb-3"></i>
+              <p class="review-text italic">"{{ review.text }}"</p>
+              <div class="author-info d-flex align-items-center mt-3">
+                <div class="ms-3">
+                  <h6 class="fw-bold mb-0">{{ review.author }}</h6>
+                  <small class="text-gold">{{ review.role }}</small>
+                </div>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

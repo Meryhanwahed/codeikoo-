@@ -1,0 +1,38 @@
+.features-strip {
+  background-color: #ffffff;
+  margin-top: -50px;
+  position: relative;
+  z-index: 10;
+  border-radius: 12px;
+  max-width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.icon-box {
+  background-color: rgba(197, 160, 89, 0.1);
+  padding: 15px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.features-strip div:hover .icon-box {
+  transform: translateY(-5px);
+  background-color: rgba(197, 160, 89, 0.2);
+}
+
+.h6 {
+  color: #333;
+}
+
+
+@media (min-width: 768px) {
+  .border-left-custom:not(:first-child) {
+    border-right: 1px solid #eee;
+  }
+}
+
+
+.features-strip {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
