@@ -1,0 +1,43 @@
+<div class="product-card" (click)="viewDetails()">
+  <div class="product-img-wrapper">
+    <img
+      [src]="product.image"
+      [alt]="product.name"
+      [attr.title]="product.name"
+      class="product-img"
+    >
+
+    <div class="category-tag">{{ product.categoryLabel }}</div>
+
+    <div class="overlay-actions">
+      <button class="btn-action" type="button">
+        <i class="fas fa-eye" aria-hidden="true"></i>
+        تفاصيل أكثر
+      </button>
+    </div>
+  </div>
+
+  <div class="product-info text-center">
+    <h3 class="product-title">{{ product.name }}</h3>
+    <p class="product-desc text-muted">{{ product.shortDesc }}</p>
+
+    <div class="product-specs d-flex justify-content-center gap-3">
+      <span [attr.title]="'الكثافة'">
+        <i class="fas fa-weight-hanging" aria-hidden="true"></i>
+        {{ product.specs.density }}
+      </span>
+
+      <span [attr.title]="'المقاومة'">
+        <i class="fas fa-shield-alt" aria-hidden="true"></i>
+        {{ product.specs.resistance }}
+      </span>
+    </div>
+
+    <div class="gold-divider mx-auto my-3"></div>
+
+    <button class="btn-whatsapp" type="button" aria-label="طلب المنتج عبر واتساب">
+      <i class="fab fa-whatsapp" aria-hidden="true"></i>
+      اطلب الآن
+    </button>
+  </div>
+</div>

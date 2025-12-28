@@ -1,0 +1,32 @@
+<section class="product-grid-section py-5">
+  <div class="container">
+    <div class="row g-4">
+
+      @for (item of filteredProducts; track item.id; let i = $index) {
+        <div
+          class="col-lg-4 col-md-6 animate-card"
+          [style.animation-delay]="(i * 0.1) + 's'"
+        >
+          <app-product-card
+            [product]="item"
+            (onViewDetails)="handleDetails($event)">
+          </app-product-card>
+        </div>
+      }
+      @empty {
+        <div class="text-center py-5">
+          <img
+            src="assets/icons/no-products.svg"
+            width="100"
+            class="mb-3 opacity-50"
+            alt="لا توجد منتجات"
+          >
+          <h4 class="text-muted">
+            لم يتم العثور على منتجات في هذا القسم
+          </h4>
+        </div>
+      }
+
+    </div>
+  </div>
+</section>

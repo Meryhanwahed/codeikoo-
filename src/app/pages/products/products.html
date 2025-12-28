@@ -1,0 +1,18 @@
+<app-page-header
+  title="منتجات فوميكس الفاخرة"
+  backgroundImage="assets/images/architecture-bg.png">
+</app-page-header>
+
+<app-product-filter (filterChange)="onFilterChange($event)"></app-product-filter>
+
+<app-product-grid
+  [selectedCategory]="currentFilter"
+  (openModal)="openProductModal($event)">
+</app-product-grid>
+
+@if (isModalOpen && selectedProduct) {
+  <app-product-details-modal
+    [product]="selectedProduct"
+    (onClose)="closeModal()">
+  </app-product-details-modal>
+}

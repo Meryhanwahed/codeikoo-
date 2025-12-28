@@ -1,0 +1,50 @@
+<div class="modal-overlay" (click)="closeModal()">
+  <div class="modal-card animate-slide-up" (click)="$event.stopPropagation()">
+    <button title="times" class="close-btn" (click)="closeModal()">
+      <i class="fas fa-times"></i>
+    </button>
+
+    <div class="row g-0">
+      <div class="col-lg-6">
+        <div class="product-image-container">
+          <img [src]="product?.image" [alt]="product?.name" class="main-img">
+          <div class="floating-badge">{{ product?.categoryLabel }}</div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="details-content p-4 p-md-5">
+          <h2 class="product-title mb-2">{{ product?.name }}</h2>
+          <p class="text-muted mb-4">{{ product?.shortDesc }}</p>
+
+          <h5 class="section-title"><i class="fas fa-info-circle me-2"></i> المواصفات الفنية</h5>
+          <div class="specs-grid">
+            <div class="spec-item">
+              <span class="label">المقاسات:</span>
+              <span class="value">{{ product?.specs?.dimensions || 'قياسي' }}</span>
+            </div>
+            <div class="spec-item">
+              <span class="label">الوزن التقريبي:</span>
+              <span class="value">{{ product?.specs?.weight || 'حسب الطلب' }}</span>
+            </div>
+            <div class="spec-item">
+              <span class="label">طريقة التركيب:</span>
+              <span class="value">لاصق فوم / ميكانيكي</span>
+            </div>
+            <div class="spec-item">
+              <span class="label">مقاومة العوامل:</span>
+              <span class="value">مقاوم للرطوبة والحرارة</span>
+            </div>
+          </div>
+
+          <div class="action-zone mt-5">
+            <a [href]="'https://wa.me/20123456789?text=استفسار عن ' + product?.name"
+               target="_blank" class="btn-order w-100">
+              <i class="fab fa-whatsapp me-2"></i> اطلب عرض سعر الآن
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+.filter-container {
+  background: transparent;
+}
+
+.filter-btn {
+  background: white;
+  border: 2px solid #f1f1f1;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  color: #555;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.filter-btn i {
+  color: #C5A059;
+  font-size: 1.1rem;
+}
+
+.filter-btn:hover {
+  transform: translateY(-5px);
+  border-color: #C5A059;
+  color: #C5A059;
+}
+
+/* حالة الزر النشط (Active) */
+.filter-btn.active {
+  background: #C5A059;
+  border-color: #C5A059;
+  color: white;
+  box-shadow: 0 10px 20px rgba(197, 160, 89, 0.3);
+}
+
+.filter-btn.active i {
+  color: white;
+}
+
+/* أنيميشن بسيط عند التبديل */
+@keyframes pop {
+  0% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+.filter-btn.active {
+  animation: pop 0.3s ease-out;
+}
