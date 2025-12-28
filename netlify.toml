@@ -8,5 +8,4 @@
   status = 200
 
 [build.environment]
-  NETLIFY_SKIP_ANGULAR_RUNTIME = "true"
   NODE_VERSION = "20"
