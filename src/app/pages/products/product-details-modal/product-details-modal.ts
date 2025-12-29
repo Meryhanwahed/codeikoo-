@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 export class ProductDetailsModal {
 @Input() product: any; // استقبال بيانات المنتج المختار
   @Output() onClose = new EventEmitter<void>(); // حدث لإغلاق المودال
+  
 
   closeModal() {
     this.onClose.emit();

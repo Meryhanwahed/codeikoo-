@@ -2,19 +2,11 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './shared/header/header';
 import { Footer } from './shared/footer/footer';
-
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [Header, Footer, RouterOutlet],
-  template: `
-    <app-header></app-header>
-
-    <main class="page-content">
-      <router-outlet></router-outlet>
-    </main>
-
-    <app-footer></app-footer>
-  `
+  templateUrl: './app.html', 
 })
 export class AppComponent {}
