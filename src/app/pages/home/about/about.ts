@@ -21,7 +21,8 @@ features = [
     {
       title: 'مقاوم للعوامل الجوية',
       desc: 'يتحمل الشمس والرطوبة بفضل الطبقة الأسمنتية',
-      icon: 'assets/icons/shield.png' 
+      icon: 'assets/icons/shield.png'
     }
   ];
+  constructor() {}
 }

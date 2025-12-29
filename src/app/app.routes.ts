@@ -12,7 +12,7 @@ export const routes: Routes = [
       import('./pages/products/products').then(m => m.Products),
   },
 
-  // fallback (اختياري لكن مهم)
+  
   {
     path: '**',
     redirectTo: ''
